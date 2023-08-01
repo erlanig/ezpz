@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HALO HALO TYA</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #container {
+        text-align: center;
+      }
+
+      #By {
+        margin-right: 20px;
+        display: inline-block;
+      }
+
+      #Bn {
+        display: inline-block;
+        transition: all 0.5s ease;
+      }
+    </style>
+
+    <script type="text/javascript">
+      alert("yth. nurtria purnamasari");
+      alert("selamat malem tya");
+      alert("sebelumnya izin memperkenalkan diri, perkenalkan saya erlan irhab ghalib, manusia setengah mahasiswa");
+      alert("aku nda ngeerti besok panggilan apa");
+      alert("tapi pokonya semangat buat besok!!!");
+      alert("dan jangan lupa makan + istirahat yang cukup tyaa!!");
+      flag = 1;
+
+      function f1() {
+        alert("NAH GITU DONGGG!!");
+        alert("GABISA DIPENCET KAN ENGGANYA?");
+        alert("BERARTI HARUS SEMANGAT");
+        alert("AKU YANG NYEMANGATINNYA JUGA JADI SEMANGAT");
+        alert("DADAHH");
+      }
+
+      function calculateDistance(x1, y1, x2, y2) {
+        return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+      }
+
+      function moveButton(event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const buttonRect = Bn.getBoundingClientRect();
+        const buttonX = buttonRect.left + buttonRect.width / 2;
+        const buttonY = buttonRect.top + buttonRect.height / 2;
+        const distance = calculateDistance(mouseX, mouseY, buttonX, buttonY);
+
+        if (distance < 150) {
+          const directionX = buttonX - mouseX;
+          const directionY = buttonY - mouseY;
+          const moveX = mouseX + directionX * 0.02;
+          const moveY = mouseY + directionY * 0.02;
+          Bn.style.left = moveX - buttonRect.width / 2 + "px";
+          Bn.style.top = moveY - buttonRect.height / 2 + "px";
+        } else {
+          Bn.style.left = "166px";
+          Bn.style.top = "370px";
+        }
+      }
+
+      document.addEventListener("mousemove", moveButton);
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>WLEE</h1>
+      <img alt="elanelanelan" src="https://drive.google.com/uc?id=1S1W3f0GiqLxYaUpeF9UKOpnzNpQaufEm&export=download" height="300" />
+      <h1 style="#">SEMANGAT BUAT BESOK</h1>
+      <div id="By">
+        <input type="button" value="IYAAAA NIH SEMANGAT BANGET" onClick="f1()" />
+      </div>
+      <div id="Bn">
+        <input type="button" value="ENGGAKKK" />
+      </div>
+    </div>
+  </body>
+</html>
